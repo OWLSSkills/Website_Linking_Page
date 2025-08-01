@@ -13,13 +13,13 @@ export default function Home() {
         <div className={styles.horizontaly_divide_two_divs}>
           <div className={styles.image_button_container}>
             <img src="/images/Logo_Jessie_gmail.png" alt="Custom Survival Course" />
-              <button className={`${styles.position_button_under_prev} ${styles.button_for_site_linking_form} ${styles.background_color_light_purple}`}>
+              <button className={`${styles.position_button_under_prev} ${styles.button_for_site_linking_form} ${styles.background_color_light_purple} ${styles.font_color_white}`}>
                 Private Custom Courses by Jessie Krebs
               </button>
           </div>
           <div className={styles.image_button_container}>
             <img src="/images/Custom_Survival_Course.png" alt="Women's Survival Course" />
-              <button className={`${styles.position_button_under_prev} ${styles.button_for_site_linking_form} ${styles.background_color_light_green}`}>
+              <button className={`${styles.position_button_under_prev} ${styles.button_for_site_linking_form} ${styles.background_color_light_green} ${styles.font_color_white}`}>
                 Women's Survival School * by Jessie Krebs
               </button>
           </div>

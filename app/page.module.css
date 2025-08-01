@@ -33,12 +33,13 @@
 
 .background_color_light_purple {
   background-color: #d8ccf0; 
-  color: #000;
 }
 
 .background_color_light_green {
-  background-color: #c4f0c2; 
-  color: #000;
+  background-color: rgb(200,189,210); 
+}
+.font_color_white {
+  color: rgb(212,220,162); 
 }
 
 
