@@ -8,9 +8,9 @@
 }
 
 .site_connection_logo {
-  width: 50%;
+  width: 30%;
   height: auto;
-  margin-top: -5%;
+  margin-top: -4%;
   padding: 0;
   display: block;
 }
@@ -32,14 +32,25 @@
 }
 
 .background_color_light_purple {
-  background-color: #d8ccf0; 
+  background-color: #7A5EA4; 
+}
+
+.background_color_light_purple:hover {
+  background-color: #D1C2DA; 
 }
 
 .background_color_light_green {
-  background-color: rgb(200,189,210); 
+  background-color: #276C4C; 
+}
+.background_color_light_green:hover{
+  background-color: #D2DE9C; 
 }
 .font_color_white {
-  color: rgb(212,220,162); 
+  color: #D2DE9C; 
+}
+
+.font_color_white:hover {
+  color: #122932; 
 }
 
 
@@ -76,5 +87,73 @@
   height: auto;
   position: relative;
   overflow: hidden;
-  margin-top: -5%
+  margin-top: -3%
+}
+
+
+.as_seen_animation_banner{
+  background-color: #276C4C;
+  width: 100%;
+  height: 8.5svh;
+}
+
+
+/* Container section */
+.as_seen_animation_banner {
+  background-color: #276C4C;
+  width: 100%;
+  height: 8.5svh;
+  position: relative;
+}
+
+/* Main wrapper */
+.animation_banner_wrapper {
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 2vw;
+}
+
+/* Scrolling track */
+.animation_banner_track {
+  display: flex;
+  gap: clamp(6rem, 16vw, 16rem);
+  animation: scroll-left 10s linear infinite;
+  width: max-content;
+  align-items: center;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-54%);
+  }
+}
+
+.animation_banner_track:hover {
+  animation-play-state: paused;
+}
+
+/* Force each logo into a box with the same width */
+.logo_container {
+  width: clamp(100px, 10vw, 160px);
+  height: clamp(20px, 3vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* All logos scale naturally inside their container */
+.animation_banner_image {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* National Geographic logo gets visually larger */
+.scale_up_logo {
+  transform: scale(1.6);
 }
