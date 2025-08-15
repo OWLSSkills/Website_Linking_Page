@@ -1,159 +1,57 @@
 
 
 
-.center_self_horizontally {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-}
 
-.site_connection_logo {
-  width: 30%;
-  height: auto;
-  margin-top: -4%;
-  padding: 0;
-  display: block;
-}
-.position_button_under_prev {
-  display: block;
-  margin: 1rem auto 0 auto; 
-  border-radius: 0.5rem;     
-  padding: 1rem;             
-  text-align: center;
-  font-size: 1rem;
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-  width: fit-content;
-}
+   .page{ position:relative; }
 
-.button_for_site_linking_form {
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); 
-}
-
-.background_color_light_purple {
-  background-color: #7A5EA4; 
-}
-
-.background_color_light_purple:hover {
-  background-color: #D1C2DA; 
-}
-
-.background_color_light_green {
-  background-color: #276C4C; 
-}
-.background_color_light_green:hover{
-  background-color: #D2DE9C; 
-}
-.font_color_white {
-  color: #D2DE9C; 
-}
-
-.font_color_white:hover {
-  color: #122932; 
-}
-
-
-
-
-.horizontaly_divide_two_divs {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  max-width: 1200px; 
-  margin: 0 auto;     
-  gap: 4rem;          
-  padding: 2rem;      
-  align-items: end;   
-}
-
-.image_button_container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  max-width: 100%;
-  overflow: hidden;
-}
-
-.image_button_container img {
-  max-width: 100%;
-  height: auto;
-  display: block;
-  object-fit: contain;
-}
-
-.background_color_steel {
-  background-color: rgb(169, 169, 169);
-  width: 100%;
-  height: auto;
-  position: relative;
-  overflow: hidden;
-  margin-top: -3%
-}
-
-
-.as_seen_animation_banner{
-  background-color: #276C4C;
-  width: 100%;
-  height: 8.5svh;
-}
-
-
-/* Container section */
-.as_seen_animation_banner {
-  background-color: #276C4C;
-  width: 100%;
-  height: 8.5svh;
-  position: relative;
-}
-
-/* Main wrapper */
-.animation_banner_wrapper {
-  overflow: hidden;
-  width: 100%;
-  padding: 1rem 2vw;
-}
-
-/* Scrolling track */
-.animation_banner_track {
-  display: flex;
-  gap: clamp(6rem, 16vw, 16rem);
-  animation: scroll-left 10s linear infinite;
-  width: max-content;
-  align-items: center;
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0%);
-  }
-  100% {
-    transform: translateX(-54%);
-  }
-}
-
-.animation_banner_track:hover {
-  animation-play-state: paused;
-}
-
-/* Force each logo into a box with the same width */
-.logo_container {
-  width: clamp(100px, 10vw, 160px);
-  height: clamp(20px, 3vw, 40px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
-}
-
-/* All logos scale naturally inside their container */
-.animation_banner_image {
-  max-height: 100%;
-  max-width: 100%;
-  object-fit: contain;
-  transition: transform 0.2s ease-in-out;
-}
-
-/* National Geographic logo gets visually larger */
-.scale_up_logo {
-  transform: scale(1.6);
-}
+   .heroHalf { height: 50svh; }
+   .heroLogo { width:30%; margin-top:-4%; margin-left: auto; margin-right: auto; }
+   .topRightLogos{
+     position:absolute; top:0; right:0; padding: 4svw;
+     display:flex; align-items:center; gap:.5rem;
+   }
+   .smallLogo { width:120px; height:auto; }
+   
+   
+   .asSeenWrap{ display:flex; flex-direction:column; align-items:center; width:100%; padding:1rem; }
+   
+   
+   .desc{
+     display:flex; gap: var(--s-3); width:100%; padding: 1rem;
+   }
+   .descImage{
+     max-width:50%; height:auto; object-fit:contain; margin-top:1rem;
+     border-radius: var(--radius);
+   }
+   .descText{
+     flex:1; padding:1rem; border-radius: var(--radius); display:flex; flex-direction:column;
+   }
+   .descHeaderRow{ display:flex; justify-content:space-between; align-items:center; padding:.5rem; }
+   .descHeader{ max-width:60%; font-size:1.5rem; }
+   .descLogo{ max-width:30%; border-radius: var(--radius); }
+   
+   
+   .splitLeft{
+     width:45%; display:flex; flex-direction:column; align-items:center; justify-content:center;
+   }
+   
+   
+   .contact { margin-top: 5svh; }
+   .title  { text-align:center; margin:0 0 2rem; font-weight:800; letter-spacing:.5px; }
+   .form   { max-width:1180px; margin:0 auto; padding:0 1.5rem; display:grid; gap:1.5rem; }
+   .formRow{ display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
+   @media (max-width: 820px){ .formRow{ grid-template-columns:1fr; gap:1rem; } }
+   
+   
+   .footer{ margin-top:4svh; background: var(--green-50); }
+   .footerStack{ display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; }
+   
+   
+   .banner { background: var(--green-600); width:100%; height: 8.5svh; position:relative; }
+   .trackWrap{ overflow:hidden; width:100%; padding: 1rem 2vw; }
+   .track{ display:flex; align-items:center; gap: clamp(6rem, 16vw, 16rem); width:max-content; animation: scroll-left 10s linear infinite; }
+   .track:hover{ animation-play-state:paused; }
+   .logoBox{ width: clamp(100px, 10vw, 160px); height: clamp(20px, 3vw, 40px); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
+   .logoImg{ max-height:100%; max-width:100%; object-fit:contain; transition: transform .2s ease-in-out; }
+   @keyframes scroll-left{ 0%{ transform: translateX(0%);} 100%{ transform: translateX(-54%);} }
+   
