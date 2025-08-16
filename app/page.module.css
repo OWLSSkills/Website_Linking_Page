@@ -61,22 +61,22 @@
 
    @media (max-width: 820px) {
 
-  .left { display: contents; }                 /* let children place via areas */
+  .left { display: contents; }                 
 
   .headline { grid-area: headline; margin: 0; line-height: 1.15; }
   .text     { grid-area: text; }
 
   .ctaRow {
     display: flex;
-    align-items: center; /* vertical align */
-    gap: var(--s-3);     /* space between button and image */
+    align-items: center; 
+    gap: var(--s-3);     
   }
   .pics {
     grid-area: pics;
     display: grid;
     gap: .75rem;
     align-content: start;
-    margin-top: .6rem;                        /* makes pics sit a bit lower */
+    margin-top: .6rem;                        
   }
 
   .pic {
@@ -87,12 +87,12 @@
     box-shadow: 0 8px 24px rgba(0,0,0,.15);
   }
 
-  /* optional second image slight overlap look */
+  
   .picOffset { margin-left: 10%; margin-top: -.5rem; }
 
   .logo {
-    grid-area: logo;                           /* final row, right of button */
-    justify-self: start;                       /* sits just to the right of CTA */
+    grid-area: logo;                           
+    justify-self: start;                       
     width: min(42vw, 180px);
     height: auto;
     margin-left: 1rem;
@@ -106,7 +106,7 @@
 @media (max-width: 820px) {
   .desc {
     display: grid;
-    grid-template-columns: 1fr 38vw;              /* text left, image right */
+    grid-template-columns: 1fr 38vw;              
     grid-template-areas:
       "headline pic"
       "text     text"
@@ -117,7 +117,7 @@
     width: 100svw;
   }
 
-  /* let children place themselves on the grid */
+  
   .splitLeft { display: contents; }
 
   .splitLeft h3 { grid-area: headline; margin: 0; line-height: 1.15; }
@@ -129,12 +129,12 @@
   .descImage {
     grid-area: pic;
     align-self: start;
-    margin-top: .6rem;                            /* drop image a touch lower */
+    margin-top: .6rem;                            
     width: 100%;
     height: auto;
     border-radius: .5rem;
   }
 
-  /* small nicety for the logo beside the button */
+  
   .ctaRow img { margin-left: 1rem; width: min(42vw, 180px); height: auto; }
 }

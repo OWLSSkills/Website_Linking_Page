@@ -15,7 +15,6 @@ export default function CustomSurvivalCoursesMobile() {
           Costa Rica, what’s YOUR goal? Right this way to get it sorted!
         </p>
 
-        {/* add styles.ctaRow here */}
         <div className={`${styles.ctaRow}  mt-6`}>
           <button className="btn btn--green">Learn More</button>
           <img src="/images/Custom_Survival_Course.png" alt="Jessie Krebs logo" className="img-fluid " />

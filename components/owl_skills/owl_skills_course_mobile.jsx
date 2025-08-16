@@ -13,7 +13,7 @@ export default function OwlSkillsCourseMobile() {
 
         </p>
 
-        {/* add styles.ctaRow here */}
+        
         <div className={`${styles.ctaRow}  mt-6`}>
           <button className="btn btn--purple">Learn More</button>
           <img src="/images/OWLS_COLOR.png" alt="Jessie Krebs logo" className="img-fluid " />

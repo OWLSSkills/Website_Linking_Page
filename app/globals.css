@@ -44,7 +44,7 @@
 .flex-2 {
   display: flex;
   gap: var(--s-6);
-  flex-wrap: nowrap; /* prevents stacking */
+  flex-wrap: nowrap; 
 }
 
 .flex-2 > div {
@@ -96,7 +96,7 @@
   padding: var(--s-3);
   font-weight: 700;
   width: fit-content;
-  font-size: clamp(0.85rem, 2.2vw, 1rem); /* scales with viewport */
+  font-size: clamp(0.85rem, 2.2vw, 1rem); 
   max-height: 6svh;
 }
 .btn--green{ background: var(--green-600); color: var(--cream-100); }
@@ -117,7 +117,7 @@
 .input:focus, .textarea:focus{ box-shadow:0 0 0 3px rgba(114,85,140,.25); }
 
 .equal-image {
-  height: 200px;           /* adjust as needed */
+  height: 200px;           
   display: flex;
   align-items: center;
   justify-content: center;
