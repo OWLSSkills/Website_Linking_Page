@@ -1,3 +1,5 @@
+"use client";
+
 import styles from '@/app/page.module.css'
 
 export default function CustomSurvivalCoursesMobile() {
@@ -16,7 +18,7 @@ export default function CustomSurvivalCoursesMobile() {
         </p>
 
         <div className={`${styles.ctaRow}  mt-6`}>
-          <button className="btn btn--green">Learn More</button>
+          <button className="btn btn--green btn--square">Learn More</button>
           <img src="/images/Custom_Survival_Course.png" alt="Jessie Krebs logo" className="img-fluid " />
         </div>
       </div>

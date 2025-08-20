@@ -1,3 +1,5 @@
+"use client";
+
 import styles from '@/app/page.module.css'
 export default function CustomSurvivalCoursesDesktop() {
 return(
@@ -16,7 +18,7 @@ return(
         learning skills in the wilds of Costa Rica, what’s <b>YOUR</b> goal? Right this way to get it sorted!
       </p>
       <div className="flex justify-start mt-3">
-        <button className="btn btn--green">Learn More</button>
+        <button className="btn btn--green btn--square">Learn More</button>
       </div>
     </div>
   </div>
