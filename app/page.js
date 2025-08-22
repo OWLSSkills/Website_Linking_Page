@@ -21,7 +21,7 @@ export default function Home() {
       alert("Please fill out all fields.");
       return;
     }
-    
+
   }
 
 
@@ -53,9 +53,24 @@ export default function Home() {
         </div>
 
 
-        <div className="bg-green-50 section box-shadow svh-45">
-          <div className="container flex-2 items-center">
-            <div className="flex flex-col items-center">
+        <div className=" video-hero  section box-shadow svh-45">
+
+        <video
+          className="video-hero__bg"
+          src="/videos/animated_banner.mp4
+"
+          autoPlay      // React uses camelCase
+          muted         // required for autoplay
+          loop
+          playsInline   // prevents iOS fullscreen
+          preload="metadata"
+          aria-hidden="true"
+          // poster="/images/bg-fallback.jpg"
+        />
+          <div className="video-hero__overlay"></div>
+
+          <div className="container flex-2 items-center video-hero__content">
+          <div className="flex flex-col items-center">
               <div className="equal-image">
                 <img src="/images/OWLS_Color.png" alt="" className="img-fluid" />
               </div>

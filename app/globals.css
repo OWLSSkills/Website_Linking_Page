@@ -153,3 +153,45 @@ html, body {
 }
 
 
+
+
+
+
+
+.video-hero__overlay {         /* optional: improve text/button contrast */
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    rgba(0,0,0,0.25),
+    rgba(0,0,0,0.35)
+  );
+  z-index: 0;
+}
+
+.video-hero { position: relative; overflow: hidden; isolation: isolate; }
+.video-hero__bg {
+  position: absolute; inset: 0;
+  width: 100%; height: 100%;
+  object-fit: cover; z-index: -1; pointer-events: none;
+}
+.video-hero__content { position: relative; z-index: 1; }
+/* Respect users who prefer reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .video-hero__bg {
+    display: none;
+  }
+  .video-hero {
+    background: url("/images/bg-fallback.jpg") center/cover no-repeat;
+  }
+}
+
+/* Optional: disable video for small screens to save data */
+@media (max-width: 640px) {
+  .video-hero__bg {
+    display: none;
+  }
+  .video-hero {
+    background: url("/images/bg-fallback.jpg") center/cover no-repeat;
+  }
+}
