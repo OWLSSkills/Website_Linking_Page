@@ -107,8 +107,8 @@ export default function Home() {
                 type="video/mp4"
                 media="(max-width: 640px)"
               />
-              <source src="/videos/animated_banner.webm" type="video/webm" />
-              <source src="/videos/animated_banner.mp4" type="video/mp4" />
+              <source src="/videos/animated_banner_720p.webm" type="video/webm" />
+              <source src="/videos/animated_banner_720p.mp4" type="video/mp4" />
             </>
           )}
         </video>
