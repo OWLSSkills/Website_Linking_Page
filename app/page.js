@@ -1,6 +1,6 @@
 "use client";
 import styles from "./page.module.css";
-
+import { useEffect, useRef, useState } from "react";
 
 import CustomSurvivalCoursesDesktop from "@/components/home/custom_survival_courses_description/custom_survival_courses_desktop.jsx";
 import CustomSurvivalCoursesMobile from "@/components/home/custom_survival_courses_description/custom_survival_courses_mobile";
@@ -9,6 +9,9 @@ import OwlSkillsCourseMobile from "@/components/home/owl_skills/owl_skills_cours
 export default function Home() {
   const currentYear = new Date().getFullYear();
   const mobile = screen.width < 820? true : false;
+  const ref = useRef(null);
+  const [inView, setInView] = useState(false);
+
 
   function handle_emailing_jessie(e) {
     e.preventDefault();
@@ -23,6 +26,30 @@ export default function Home() {
     }
 
   }
+
+
+
+  useEffect(() => {
+
+  const prefersReduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const saveData = navigator.connection?.saveData === true;
+  if (prefersReduced || saveData) return; 
+
+  const el = ref.current;
+  if (!el) return;
+
+  const io = new IntersectionObserver(
+    entries => {
+      if (entries[0].isIntersecting) {
+        setInView(true);     
+        io.disconnect();
+      }
+    },
+    { rootMargin: "200px 0px" } 
+  );
+  io.observe(el);
+  return () => io.disconnect();
+}, []);
 
 
   return (
@@ -56,17 +83,35 @@ export default function Home() {
         <div className=" video-hero  section box-shadow svh-45">
 
         <video
+          ref={ref}
           className="video-hero__bg"
-          src="/videos/animated_banner.mp4
-"
-          autoPlay      // React uses camelCase
-          muted         // required for autoplay
+          autoPlay
+          muted
           loop
-          playsInline   // prevents iOS fullscreen
-          preload="metadata"
+          playsInline
+          preload="none"
+          poster="/images/Jessie_Banner_Video_Background_image.png"
           aria-hidden="true"
-          // poster="/images/bg-fallback.jpg"
-        />
+          
+        >
+          {inView && (
+            <>
+             
+              <source
+                src="/videos/animated_banner_mobile.webm"
+                type="video/webm"
+                media="(max-width: 640px)"
+              />
+              <source
+                src="/videos/animated_banner_mobile.mp4"
+                type="video/mp4"
+                media="(max-width: 640px)"
+              />
+              <source src="/videos/animated_banner.webm" type="video/webm" />
+              <source src="/videos/animated_banner.mp4" type="video/mp4" />
+            </>
+          )}
+        </video>
           <div className="video-hero__overlay"></div>
 
           <div className="container flex-2 items-center video-hero__content">
