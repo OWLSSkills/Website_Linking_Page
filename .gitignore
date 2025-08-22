@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+
+
+public/videos/*.mp4
+!public/videos/animated_banner_720p.mp4
+public/videos/*.webm
