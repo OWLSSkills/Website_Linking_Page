@@ -2,13 +2,9 @@
 import styles from "./page.module.css";
 import { useEffect, useRef, useState } from "react";
 
-import CustomSurvivalCoursesDesktop from "@/components/home/custom_survival_courses_description/custom_survival_courses_desktop.jsx";
-import CustomSurvivalCoursesMobile from "@/components/home/custom_survival_courses_description/custom_survival_courses_mobile";
-import OwlSkillsCourseDesktop from "@/components/home/owl_skills_description/owl_skills_course_desktop";
-import OwlSkillsCourseMobile from "@/components/home/owl_skills_description/owl_skills_course_mobile.jsx";
+
 export default function Home() {
   const currentYear = new Date().getFullYear();
-  const mobile = screen.width < 820? true : false;
   const ref = useRef(null);
   const [inView, setInView] = useState(false);
 
@@ -111,11 +107,6 @@ export default function Home() {
 
         </div>
       </div>
-
-
-      {mobile? <CustomSurvivalCoursesMobile />:<CustomSurvivalCoursesDesktop />}
-
-      {mobile? <OwlSkillsCourseMobile />:<OwlSkillsCourseDesktop />}
 
         <div className={`mt-5`}>
           <h2 className={styles.title}>Contact Jessie!</h2>
