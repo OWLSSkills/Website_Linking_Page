@@ -3,6 +3,7 @@ import "./globals.css";
 import styles from "./page.module.css";
 import Link from "next/link";
 import Footer from "./components/Footer/Footer";
+import SocialIcons from "./components/Footer/Socials/Socials";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -35,8 +36,7 @@ export default function RootLayout({ children }) {
           </div>
 
           <div className={`${styles.topRightLogos} z-10 mobileInvisible`}>
-            <img src="/images/Logo_Jessie_gmail.png" alt="Logo" className={styles.smallLogo} />
-            <img src="/images/Custom_Survival_Course.png" alt="Custom Survival Course" className={styles.smallLogo} />
+            <SocialIcons />
           </div>
 
           <div className={styles.asSeenWrap}>
@@ -54,7 +54,7 @@ export default function RootLayout({ children }) {
           </div>
         </div>
         {children}
-        <Footer />
+        <Footer isSmall={true} />
       </body>
     </html>
   );

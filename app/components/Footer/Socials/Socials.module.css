@@ -4,6 +4,14 @@
     justify-content: center;
     align-content: center;
     text-align: center;
+    scale: .7
+}
+
+.section_small{
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
 }
 
 
