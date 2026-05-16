@@ -4,8 +4,8 @@ import { useEffect, useRef, useState } from "react";
 
 import CustomSurvivalCoursesDesktop from "@/components/home/custom_survival_courses_description/custom_survival_courses_desktop.jsx";
 import CustomSurvivalCoursesMobile from "@/components/home/custom_survival_courses_description/custom_survival_courses_mobile";
-import OwlSkillsCourseDesktop from "@/components/home/owl_skills/owl_skills_course_desktop";
-import OwlSkillsCourseMobile from "@/components/home/owl_skills/owl_skills_course_mobile.jsx";
+import OwlSkillsCourseDesktop from "@/components/home/owl_skills_description/owl_skills_course_desktop";
+import OwlSkillsCourseMobile from "@/components/home/owl_skills_description/owl_skills_course_mobile.jsx";
 export default function Home() {
   const currentYear = new Date().getFullYear();
   const mobile = screen.width < 820? true : false;
@@ -54,30 +54,9 @@ export default function Home() {
 
   return (
     <div className={styles.page}>
-      <div className="svh-100">
+      <div className="svh-40">
 
-        <div className={`relative svh-60`}>
-          <img src="/images/Jessie_Krebs_Color.png" alt="Jessie Krebs"
-            className={`img-fluid ${styles.heroLogo} center`} />
-          <div className={`${styles.topRightLogos} z-10 mobileInvisible`}>
-            <img src="/images/Logo_Jessie_gmail.png" alt="Logo" className={styles.smallLogo} />
-            <img src="/images/Custom_Survival_Course.png" alt="Custom Survival Course" className={styles.smallLogo} />
-          </div>
 
-          <div className={styles.asSeenWrap}>
-            <h1>As Seen On</h1>
-              <div className={styles.logoGrid}>
-                {/* <img src="/logo_references/alone-s9-logo-black.png" alt="Alone S9 Logo" />
-                <img src="/logo_references/National_Geographic-Logo.png" alt="National Geographic Logo" />
-                <img src="/logo_references/MasterClass-logo.png" alt="MasterClass Logo" />
-                <img src="/logo_references/outdoor-life-vector-logo.png" alt="Logo 4" />
-                <img src="/logo_references/discovery.png" alt="Logo 5" />
-                <img src="/logo_references/backPacker.png" alt="Logo 6" />
-                <img src="/logo_references/Durango-Herald.png" alt="Logo 7" />
-                <img src="/logo_references/fox.png" alt="Logo 8" /> */}
-              </div>
-          </div>
-        </div>
 
 
         <div className=" video-hero  section box-shadow svh-45">
@@ -117,14 +96,14 @@ export default function Home() {
           <div className="container flex-2 items-center video-hero__content">
           <div className="flex flex-col items-center">
               <div className="equal-image">
-                <img src="/images/OWLS_Color.png" alt="" className="img-fluid" />
+                <img src="/images/OWLS_White.png" alt="" className="img-fluid" />
               </div>
               <button className="btn btn--purple">REGISTER HERE</button>
             </div>
 
             <div className="flex flex-col items-center gap-2">
               <div className="equal-image">
-                <img src="/images/Custom_Survival_Course.png" alt="" className="img-fluid" />
+                <img src="/images/Custom_Survival_Course_White.png" alt="" className="img-fluid" />
               </div>
               <button className="btn btn--green btn--square">BOOK HERE</button>
             </div>

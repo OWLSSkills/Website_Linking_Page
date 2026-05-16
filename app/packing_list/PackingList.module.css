@@ -1,0 +1,160 @@
+.packingSection {
+  width: 100%;
+  min-height: 100svh;
+  padding: clamp(2rem, 5vw, 4rem) 1rem;
+  background: #ffffff;
+  color: #111;
+}
+
+.header {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+.header h1 {
+  margin: 0;
+  font-family: var(--font-family-display);
+  font-size: clamp(2rem, 4vw, 3.4rem);
+  line-height: 1;
+  font-weight: 500;
+}
+
+.header h2 {
+  margin: 0.5rem 0 0;
+  font-family: var(--font-family-body);
+  font-size: clamp(1rem, 1.7vw, 1.35rem);
+  line-height: 1.2;
+  font-weight: 800;
+}
+
+.intro {
+  width: min(100%, 880px);
+  margin: clamp(2.5rem, 5vw, 4rem) auto 0;
+  display: grid;
+  gap: 1.35rem;
+}
+
+.intro p {
+  margin: 0;
+  font-family: var(--font-family-body);
+  font-size: clamp(1rem, 1.6vw, 1.2rem);
+  line-height: 1.25;
+  font-weight: 500;
+}
+
+.paperCard {
+  width: min(100%, 900px);
+  margin: clamp(3rem, 6vw, 4.5rem) auto 0;
+  background-image: url("/images/Paper026.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.12));
+}
+.paperCardLight {
+  width: min(100%, 900px);
+  margin: clamp(3rem, 6vw, 4.5rem) auto 0;
+  background-image: url("/images/Paper004.png");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-position: center;
+  filter: drop-shadow(0 8px 18px rgba(0, 0, 0, 0.12));
+}
+
+.paperInner {
+  padding: clamp(2rem, 4vw, 3.2rem) clamp(1.5rem, 4.8vw, 3.6rem);
+  min-height: 620px;
+}
+
+.paperInner h3 {
+  margin: 0 0 1.3rem;
+  font-family: var(--font-family-display);
+  font-size: clamp(1.15rem, 2vw, 1.55rem);
+  line-height: 1.1;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.paperInner h3:not(:first-child) {
+  margin-top: 1.75rem;
+}
+
+.listIntro {
+  margin: 0 0 0.75rem;
+  font-family: var(--font-family-body);
+  font-size: clamp(1rem, 1.5vw, 1.15rem);
+  line-height: 1.35;
+}
+
+.paperInner ul {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.85rem;
+}
+
+.paperInner li {
+  padding-left: 0.15rem;
+  font-family: var(--font-family-body);
+  font-size: clamp(0.95rem, 1.45vw, 1.08rem);
+  line-height: 1.35;
+}
+
+@media (max-width: 768px) {
+  .packingSection {
+    padding: 2rem 0.9rem;
+  }
+
+  .intro {
+    margin-top: 2rem;
+    gap: 1rem;
+  }
+
+  .intro p {
+    line-height: 1.35;
+  }
+
+  .paperCard {
+    width: min(100%, 620px);
+    margin-top: 2.5rem;
+    background-size: cover;
+  }
+
+  .paperInner {
+    padding: 2rem 1.4rem;
+    min-height: auto;
+  }
+
+  .paperInner ul {
+    gap: 0.7rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: clamp(1.8rem, 10vw, 2.5rem);
+  }
+
+  .header h2 {
+    font-size: 1rem;
+  }
+
+  .paperCard {
+    background-size: cover;
+  }
+
+  .paperInner {
+    padding: 1.6rem 1.1rem;
+  }
+
+  .paperInner h3 {
+    font-size: 1.05rem;
+  }
+
+  .paperInner li,
+  .listIntro {
+    font-size: 0.95rem;
+  }
+}

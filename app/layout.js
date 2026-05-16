@@ -1,6 +1,6 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-
+import styles from "./page.module.css";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -20,6 +20,28 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
+                <div className={`relative svh-60`}>
+          <img src="/images/Jessie_Krebs_Color.png" alt="Jessie Krebs"
+            className={`img-fluid ${styles.heroLogo} center`} />
+          <div className={`${styles.topRightLogos} z-10 mobileInvisible`}>
+            <img src="/images/Logo_Jessie_gmail.png" alt="Logo" className={styles.smallLogo} />
+            <img src="/images/Custom_Survival_Course.png" alt="Custom Survival Course" className={styles.smallLogo} />
+          </div>
+
+          <div className={styles.asSeenWrap}>
+            <h1>As Seen On</h1>
+              <div className={styles.logoGrid}>
+                <img src="/logo_references/alone-s9-logo-black.png" alt="Alone S9 Logo" />
+                <img src="/logo_references/National_Geographic-Logo.png" alt="National Geographic Logo" />
+                <img src="/logo_references/MasterClass-logo.png" alt="MasterClass Logo" />
+                <img src="/logo_references/outdoor-life-vector-logo.png" alt="Outdoor Life Logo" />
+                <img src="/logo_references/discovery.png" alt="Discovery Logo" />
+                <img src="/logo_references/backPacker.png" alt="Backpacker Logo" />
+                <img src="/logo_references/Durango-Herald.png" alt="Durango Herald Logo" />
+                <img src="/logo_references/Black_Fox.png" alt="Black Fox Logo" />
+              </div>
+          </div>
+        </div>
         {children}
       </body>
     </html>

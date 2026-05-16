@@ -128,14 +128,17 @@
 
   .ctaRow { grid-area: cta; }
 
-  .descImage {
-    grid-area: pic;
-    align-self: start;
-    margin-top: .6rem;    
-    margin-left: 1rem;                        
-    width: 100%;
-    height: auto;
-    border-radius: .5rem;
+  .desc {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 38vw);
+    grid-template-areas:
+      "headline pic"
+      "text     text"
+      "cta      cta";
+    gap: 1rem;
+    padding: 1rem;
+    inline-size: 100%;
+    max-inline-size: 100dvw;
   }
 
   

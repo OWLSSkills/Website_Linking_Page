@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
 
+*, *::before, *::after { box-sizing: border-box; }
 
 
 html, body {
@@ -163,17 +164,25 @@ html, body {
   inset: 0;
   background: linear-gradient(
     to bottom,
-    rgba(0,0,0,0.25),
-    rgba(0,0,0,0.35)
+    rgba(241, 241, 241, 0.25),
+    rgba(241, 241, 241, 0.25),
   );
   z-index: 0;
 }
-
-.video-hero { position: relative; overflow: hidden; isolation: isolate; }
+/* TODO JAKE pan video up */
+.video-hero { position: relative; overflow: hidden; isolation: isolate; } 
 .video-hero__bg {
-  position: absolute; inset: 0;
-  width: 100%; height: 100%;
-  object-fit: cover; z-index: -1; pointer-events: none;
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  /* move the visible crop upward */
+  object-position: center 30%;
+
+  z-index: -1;
+  pointer-events: none;
 }
 .video-hero__content { position: relative; z-index: 1; }
 /* Respect users who prefer reduced motion */
@@ -182,7 +191,7 @@ html, body {
     display: none;
   }
   .video-hero {
-    background: url("/images/bg-fallback.jpg") center/cover no-repeat;
+    background: url("/images/Jessie_Banner_Video_Background_image.png") center/cover no-repeat;
   }
 }
 
@@ -192,6 +201,6 @@ html, body {
     display: none;
   }
   .video-hero {
-    background: url("/images/bg-fallback.jpg") center/cover no-repeat;
+    background: url("/images/Jessie_Banner_Video_Background_image.png") center/cover no-repeat;
   }
 }
