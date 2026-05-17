@@ -23,7 +23,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
-        <div className={`relative svh-60`}>
+        <div className={styles.siteHeader}>
           <img
             src="/images/Jessie_Krebs_Color.png"
             alt="Jessie Krebs"
@@ -45,11 +45,11 @@ export default function RootLayout({ children }) {
               <img src="/logo_references/alone-s9-logo-black.png" alt="Alone S9 Logo" />
               <img src="/logo_references/National_Geographic-Logo.png" alt="National Geographic Logo" />
               <img src="/logo_references/MasterClass-logo.png" alt="MasterClass Logo" />
-              <img src="/logo_references/outdoor-life-vector-logo.png" alt="Outdoor Life Logo" />
+              <img className={styles.mobileInvisible} src="/logo_references/outdoor-life-vector-logo.png" alt="Outdoor Life Logo" />
               <img src="/logo_references/discovery.png" alt="Discovery Logo" />
-              <img src="/logo_references/backPacker.png" alt="Backpacker Logo" />
-              <img src="/logo_references/Durango-Herald.png" alt="Durango Herald Logo" />
-              <img src="/logo_references/Black_Fox.png" alt="Black Fox Logo" />
+              <img className={styles.mobileInvisible} src="/logo_references/backPacker.png" alt="Backpacker Logo" />
+              <img className={styles.mobileInvisible} src="/logo_references/Durango-Herald.png" alt="Durango Herald Logo" />
+              <img className={styles.mobileInvisible} src="/logo_references/Black_Fox.png" alt="Black Fox Logo" />
             </div>
           </div>
         </div>

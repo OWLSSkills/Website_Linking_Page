@@ -37,7 +37,7 @@ html, body {
 
 
 .container        { max-width: 1200px; margin: 0 auto; padding: 0 var(--s-3); }
-.section          { width:100svw; }
+.section          { width:100%; }
 .flex             { display: flex; }
 .flex-col         { flex-direction: column; }
 .items-center     { align-items: center; }
@@ -202,5 +202,21 @@ html, body {
   }
   .video-hero {
     background: url("/images/Jessie_Banner_Video_Background_image.png") center/cover no-repeat;
+  }
+}
+
+@media (max-width: 640px) {
+  .flex-2 {
+    flex-direction: column;
+    flex-wrap: wrap;
+    gap: var(--s-3);
+  }
+
+  .equal-image {
+    height: 120px;
+  }
+
+  .btn {
+    max-height: none;
   }
 }

@@ -1,0 +1,255 @@
+.section {
+  width: 100%;
+  height: 100svh;
+  max-height: 100svh;
+  display: flex;
+  align-items: center;
+  background: rgb(245, 249, 246);
+  color: #000;
+  padding: clamp(1.5rem, 3.5vw, 3rem) 1rem;
+  border-top: 10px solid rgba(0, 0, 0, 0.28);
+  overflow: hidden;
+}
+
+.inner {
+  width: min(100% - 32px, 1260px);
+  height: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 0;
+}
+
+.title {
+  margin: 0 0 clamp(1rem, 2vw, 1.75rem);
+  text-align: center;
+  font-family: var(--font-family-display, sans-serif);
+  font-size: clamp(3.5rem, 6.5vw, 6.5rem);
+  line-height: 0.82;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: minmax(300px, 0.95fr) minmax(400px, 1fr);
+  align-items: center;
+  gap: clamp(2rem, 5vw, 5rem);
+  min-height: 0;
+}
+
+.collageColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+}
+
+.collageImage {
+  width: min(100%, 520px);
+  max-height: 68svh;
+  height: auto;
+  display: block;
+  object-fit: contain;
+}
+
+.copyColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 0;
+}
+
+.subtitle {
+  width: 100%;
+  margin: 0 0 clamp(1rem, 2vw, 1.75rem);
+  font-family: var(--font-family-handwritten, cursive);
+  font-size: clamp(2rem, 3.8vw, 3.5rem);
+  line-height: 1;
+  text-align: left;
+}
+
+.mainCopy {
+  max-width: 640px;
+  margin: 0 0 clamp(1rem, 2vw, 1.75rem);
+  font-family: var(--font-family-body, Arial, sans-serif);
+  font-size: clamp(1.35rem, 2.1vw, 2.25rem);
+  line-height: 1.1;
+}
+
+.mainCopy strong {
+  font-weight: 900;
+}
+
+.topicGrid {
+  width: 100%;
+  max-width: 640px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: clamp(1.25rem, 3vw, 3.5rem);
+  margin-bottom: clamp(1.25rem, 2.5vw, 2.5rem);
+}
+
+.topicGrid ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-family: var(--font-family-handwritten, cursive);
+  font-size: clamp(1.25rem, 2vw, 1.85rem);
+  line-height: 1.15;
+}
+
+.learnMore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 210px;
+  min-height: 68px;
+  padding: 1rem 1.75rem;
+  background: var(--green-600, #276c4c);
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-family-body, Arial, sans-serif);
+  font-size: clamp(1.35rem, 2.2vw, 2rem);
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.learnMore:hover {
+  filter: brightness(0.92);
+}
+
+/* Slightly shorter screens need a more compressed layout */
+@media (max-height: 760px) and (min-width: 1051px) {
+  .section {
+    padding: 1.25rem 1rem;
+  }
+
+  .title {
+    font-size: clamp(3rem, 5.8vw, 5.5rem);
+    margin-bottom: 1rem;
+  }
+
+  .contentGrid {
+    gap: clamp(1.5rem, 4vw, 4rem);
+  }
+
+  .collageImage {
+    max-height: 64svh;
+    width: min(100%, 480px);
+  }
+
+  .subtitle {
+    font-size: clamp(1.8rem, 3.3vw, 3rem);
+    margin-bottom: 0.9rem;
+  }
+
+  .mainCopy {
+    font-size: clamp(1.15rem, 1.8vw, 1.85rem);
+    margin-bottom: 1rem;
+  }
+
+  .topicGrid {
+    margin-bottom: 1rem;
+  }
+
+  .topicGrid ul {
+    font-size: clamp(1.1rem, 1.7vw, 1.55rem);
+  }
+
+  .learnMore {
+    min-height: 58px;
+    min-width: 190px;
+    font-size: clamp(1.15rem, 1.8vw, 1.6rem);
+    padding: 0.85rem 1.5rem;
+  }
+}
+
+/* Tablet/mobile: let it grow naturally so content doesn't get clipped */
+@media (max-width: 1050px) {
+  .section {
+    height: auto;
+    max-height: none;
+    min-height: auto;
+    overflow: visible;
+    padding: clamp(2.5rem, 6vw, 4rem) 1rem;
+  }
+
+  .inner {
+    height: auto;
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .collageColumn {
+    align-items: center;
+  }
+
+  .collageImage {
+    width: min(100%, 560px);
+    max-height: none;
+  }
+
+  .copyColumn {
+    align-items: center;
+    text-align: center;
+  }
+
+  .subtitle {
+    text-align: center;
+  }
+
+  .mainCopy {
+    text-align: center;
+  }
+
+  .topicGrid {
+    max-width: 620px;
+    text-align: left;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 2.5rem 1rem;
+  }
+
+  .inner {
+    width: min(100% - 16px, 1260px);
+  }
+
+  .title {
+    font-size: clamp(3rem, 15vw, 4.7rem);
+  }
+
+  .subtitle {
+    font-size: clamp(2rem, 10vw, 3rem);
+  }
+
+  .mainCopy {
+    font-size: clamp(1.25rem, 6vw, 1.7rem);
+    line-height: 1.18;
+  }
+
+  .topicGrid {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+    text-align: center;
+  }
+
+  .topicGrid ul {
+    font-size: clamp(1.35rem, 7vw, 1.8rem);
+  }
+
+  .learnMore {
+    min-width: 200px;
+    min-height: 68px;
+    font-size: 1.45rem;
+  }
+}

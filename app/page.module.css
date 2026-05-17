@@ -1,175 +1,65 @@
-
-
-
-
-   .page{ position:relative; }
-
-   .heroLogo { width:30%; margin-top:-4%; margin-left: auto; margin-right: auto; }
-   .topRightLogos{
-     position:absolute; top:0; right:0; padding: 4svw;
-     display:flex; align-items:center; gap:.5rem;
-   }
-   .smallLogo { width:120px; height:auto; }
-   
-   
-   .asSeenWrap{ display:flex; flex-direction:column; align-items:center; width:100%; padding:1rem; }
-   
-   
-   .desc{
-     display:flex; gap: var(--s-3); width:100svw; padding: 1rem;
-   }
-   .descImage{
-     max-width:50%; height:auto; object-fit:contain; margin-top:1rem;
-     border-radius: var(--radius);
-   }
-   .descText{
-     flex:1; padding:1rem; border-radius: var(--radius); display:flex; flex-direction:column;
-   }
-   .descHeaderRow{ display:flex; justify-content:space-between; align-items:center; padding:.5rem; }
-   .descHeader{ max-width:60%; font-size:1.5rem; }
-   .descLogo{ max-width:30%; border-radius: var(--radius); }
-   
-   
-   .splitLeft{
-     width:45%; display:flex; flex-direction:column; align-items:center; justify-content:center;
-   }
-   
-   
-   .contact { margin-top: 5svh; }
-   .title  { text-align:center; margin:0 0 2rem; font-weight:800; letter-spacing:.5px; }
-   .form   { width:80svw; display:grid; gap:1.5rem; justify-content: center; justify-self: center;}
-   .formRow{ display:grid; grid-template-columns:1fr 1fr; gap:3rem; }
-   @media (max-width: 820px){ .formRow{ grid-template-columns:1fr; gap:1rem; } }
-   
-   
-   .footer{ margin-top:4svh; background: var(--green-50); width: 100vw; }
-   .footerStack{ display:flex; flex-direction:column; align-items:center; justify-content:center; padding:1rem; }
-   
-   
-   .banner { background: var(--green-600); width:100%; height: 8.5svh; position:relative; }
-   .trackWrap{ overflow:hidden; width:100%; padding: 1rem 2vw; }
-   .track{ display:flex; align-items:center; gap: clamp(6rem, 16vw, 16rem); width:max-content; animation: scroll-left 10s linear infinite; }
-   .track:hover{ animation-play-state:paused; }
-   .logoBox{ width: clamp(100px, 10vw, 160px); height: clamp(20px, 3vw, 40px); display:flex; align-items:center; justify-content:center; flex-shrink:0; }
-   .logoImg{ max-height:100%; max-width:100%; object-fit:contain; transition: transform .2s ease-in-out; }
-   @keyframes scroll-left{ 0%{ transform: translateX(0%);} 100%{ transform: translateX(-54%);} }
-   
-
-
-
-
-   @media (max-width: 820px) {
-    .form{
-      width:100svw;
-    }
-
-  .left { display: contents; }                 
-
-  .headline { grid-area: headline; margin: 0; line-height: 1.15; }
-  .text     { grid-area: text; }
-
-  .ctaRow {
-    display: flex;
-    align-items: center; 
-    gap: var(--s-3);     
-  }
-  .pics {
-    grid-area: pics;
-    display: grid;
-    gap: .75rem;
-    align-content: start;
-    margin-top: .6rem;                        
-  }
-
-  .pic {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: .5rem;
-    box-shadow: 0 8px 24px rgba(0,0,0,.15);
-  }
-
-  
-  .picOffset { margin-left: 10%; margin-top: -.5rem; }
-
-  .logo {
-    grid-area: logo;                           
-    justify-self: start;                       
-    width: min(42vw, 180px);
-    height: auto;
-    margin-left: 1rem;
-  }
-
-
+.page {
+  position: relative;
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }
 
-
-
-@media (max-width: 820px) {
-  .desc {
-    display: grid;
-    grid-template-columns: 1fr 38vw;              
-    grid-template-areas:
-      "headline pic"
-      "text     text"
-      "cta      cta";
-    gap: 1rem;
-    padding: 1rem;
-    align-items: start;
-    width: 100svw;
-  }
-
-  
-  .splitLeft { display: contents; }
-
-  .splitLeft h3 { grid-area: headline; margin: 0; line-height: 1.15; }
-
-  .splitLeft p  { grid-area: text; }
-
-  .ctaRow { grid-area: cta; }
-
-  .desc {
-    display: grid;
-    grid-template-columns: 1fr minmax(0, 38vw);
-    grid-template-areas:
-      "headline pic"
-      "text     text"
-      "cta      cta";
-    gap: 1rem;
-    padding: 1rem;
-    inline-size: 100%;
-    max-inline-size: 100dvw;
-  }
-
-  
-  .ctaRow img { margin-left: 1rem; width: min(42vw, 180px); height: auto; }
+/* Used by RootLayout */
+.heroLogo {
+  width: 30%;
+  margin-top: -4%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
+.topRightLogos {
+  position: absolute;
+  top: 0;
+  right: 0;
+  padding: 4svw;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
 
+.smallLogo {
+  width: 120px;
+  height: auto;
+}
+
+.asSeenWrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  padding: 1rem;
+}
 
 .logoGrid {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 columns max */
-  gap: 2rem; /* spacing between logos */
+  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  gap: 2rem;
   justify-items: center;
   align-items: center;
   max-width: 1000px;
-  margin: 0 auto; /* center grid */
+  margin: 0 auto;
 }
 
 .logoGrid img {
-  max-width: 120px;  /* control logo size */
+  max-width: 120px;
   height: auto;
 }
 
 .logoGrid img:nth-child(1) {
-  grid-column: span 2; /* makes first row 3 evenly spaced logos */
+  grid-column: span 2;
 }
 
 .logoGrid img:nth-child(3) {
-  grid-column: span 2; /* makes first row 3 evenly spaced logos */
+  grid-column: span 2;
 }
-
 
 .topLeftLinks {
   position: absolute;
@@ -198,6 +88,249 @@
   text-decoration: underline;
 }
 
+/* Home video hero */
+.videoHeroSection {
+  position: relative;
+  width: 100vw;
+  height: 45svh;
+  min-height: 320px;
+  margin: 0;
+  overflow: hidden;
+  isolation: isolate;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+}
+
+.videoBg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 30%;
+  z-index: -2;
+  pointer-events: none;
+}
+
+.videoOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(241, 241, 241, 0.25);
+  z-index: -1;
+}
+
+.videoContent {
+  position: relative;
+  z-index: 1;
+  width: min(100% - 32px, 1200px);
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(2rem, 8vw, 7rem);
+}
+
+.videoCard {
+  flex: 1 1 0;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoLogoWrap {
+  height: clamp(120px, 18svh, 200px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.videoLogo {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.videoButton {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  cursor: pointer;
+  border-radius: var(--radius, 0.5rem);
+  padding: 1rem 1.25rem;
+  font-weight: 800;
+  width: fit-content;
+  font-size: clamp(0.85rem, 2.2vw, 1rem);
+  color: var(--cream-100, #d2de9c);
+}
+
+.videoButtonPurple {
+  background: var(--purple-500, #7a5ea4);
+}
+
+.videoButtonGreen {
+  background: var(--green-600, #276c4c);
+  border-radius: 0;
+}
+
+/* Makes child section components full-bleed even if their own internals are centered */
+.sectionBleed {
+  width: 100vw;
+  max-width: none;
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+}
+
+.sectionBleed > * {
+  width: 100%;
+}
+
+/* Contact */
+.contactSection {
+  width: 100vw;
+  margin: 5svh 0 0;
+  padding: 0 1rem 4rem;
+}
+
+.title {
+  text-align: center;
+  margin: 0 0 2rem;
+  font-weight: 800;
+  letter-spacing: 0.5px;
+}
+
+.form {
+  width: min(100%, 960px);
+  margin: 0 auto;
+  display: grid;
+  gap: 1.5rem;
+}
+
+.formRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+}
+
+/* Legacy classes kept in case old components still reference them */
+.desc {
+  display: flex;
+  gap: var(--s-3);
+  width: 100%;
+  padding: 1rem;
+}
+
+.descImage {
+  max-width: 50%;
+  height: auto;
+  object-fit: contain;
+  margin-top: 1rem;
+  border-radius: var(--radius);
+}
+
+.descText {
+  flex: 1;
+  padding: 1rem;
+  border-radius: var(--radius);
+  display: flex;
+  flex-direction: column;
+}
+
+.descHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+.descHeader {
+  max-width: 60%;
+  font-size: 1.5rem;
+}
+
+.descLogo {
+  max-width: 30%;
+  border-radius: var(--radius);
+}
+
+.splitLeft {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer {
+  margin-top: 4svh;
+  background: var(--green-50);
+  width: 100%;
+}
+
+.footerStack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.banner {
+  background: var(--green-600);
+  width: 100%;
+  height: 8.5svh;
+  position: relative;
+}
+
+.trackWrap {
+  overflow: hidden;
+  width: 100%;
+  padding: 1rem 2vw;
+}
+
+.track {
+  display: flex;
+  align-items: center;
+  gap: clamp(6rem, 16vw, 16rem);
+  width: max-content;
+  animation: scroll-left 10s linear infinite;
+}
+
+.track:hover {
+  animation-play-state: paused;
+}
+
+.logoBox {
+  width: clamp(100px, 10vw, 160px);
+  height: clamp(20px, 3vw, 40px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.logoImg {
+  max-height: 100%;
+  max-width: 100%;
+  object-fit: contain;
+  transition: transform 0.2s ease-in-out;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-54%);
+  }
+}
+
 @media (max-width: 820px) {
   .topLeftLinks {
     position: static;
@@ -210,4 +343,148 @@
   .topLeftLinks a {
     font-size: 1rem;
   }
+  .mobileInvisible {
+    display: none !important;
+  }
+
+  .logoGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+    max-width: 520px;
+  }
+
+  .logoGrid img {
+    max-width: 110px;
+  }
+
+  .logoGrid img:nth-child(1),
+  .logoGrid img:nth-child(3) {
+    grid-column: auto;
+  }
+
+  .heroLogo {
+    width: min(68vw, 320px);
+    margin-top: 0;
+  }
+
+  .topRightLogos {
+    position: static;
+    justify-content: center;
+    padding: 1rem;
+  }
+
+  .videoHeroSection {
+    height: 48svh;
+    min-height: 420px;
+    background: none;
+  }
+
+  .videoBg {
+    display: block;
+    object-fit: cover;
+    object-position: center 30%;
+  }
+
+
+
+  .videoButton {
+    font-size: 0.9rem;
+    padding: 0.9rem 1rem;
+  }
+
+  .videoContent {
+    width: min(100% - 24px, 680px);
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .videoCard {
+    max-width: 320px;
+  }
+
+  .videoLogoWrap {
+    height: 112px;
+  }
+
+
+
+  .formRow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .form {
+    width: min(100%, 620px);
+  }
+
+  .desc {
+    display: grid;
+    grid-template-columns: 1fr minmax(0, 38vw);
+    grid-template-areas:
+      "headline pic"
+      "text     text"
+      "cta      cta";
+    gap: 1rem;
+    padding: 1rem;
+    inline-size: 100%;
+    max-inline-size: 100%;
+  }
+
+  .splitLeft {
+    display: contents;
+  }
+
+  .splitLeft h3 {
+    grid-area: headline;
+    margin: 0;
+    line-height: 1.15;
+  }
+
+  .splitLeft p {
+    grid-area: text;
+  }
+
+  .ctaRow {
+    grid-area: cta;
+    display: flex;
+    align-items: center;
+    gap: var(--s-3);
+  }
+
+  .ctaRow img {
+    margin-left: 1rem;
+    width: min(42vw, 180px);
+    height: auto;
+  }
+}
+
+@media (max-width: 640px) {
+  .videoHeroSection {
+    height: 48svh;
+    min-height: 420px;
+  }
+
+
+
+  .videoHeroSection {
+    background-image: url("/images/Jessie_Banner_Video_Background_image.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center 30%;
+  }
+
+  .videoLogoWrap {
+    height: 100px;
+  }
+
+  .videoButton {
+    font-size: 0.9rem;
+    padding: 0.9rem 1rem;
+  }
+}
+
+
+.siteHeader {
+  height: auto;
+  overflow: hidden;
 }

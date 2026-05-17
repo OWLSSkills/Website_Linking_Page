@@ -1,0 +1,242 @@
+.section {
+  width: 100%;
+  height: 100svh;
+  max-height: 100svh;
+  display: flex;
+  align-items: center;
+  background: rgb(246, 242, 247);
+  color: #000;
+  padding: clamp(1.25rem, 3vw, 2.5rem) 1rem;
+  border-top: 10px solid rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+}
+
+.inner {
+  width: min(100% - 32px, 1260px);
+  height: 100%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr) auto;
+  align-items: center;
+  min-height: 0;
+}
+
+.logoSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.logo {
+  width: min(100%, 820px);
+  max-height: 22svh;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.contentGrid {
+  display: grid;
+  grid-template-columns: minmax(340px, 0.85fr) minmax(420px, 1.15fr);
+  align-items: center;
+  gap: clamp(2.5rem, 6vw, 6rem);
+  min-height: 0;
+}
+
+.copyColumn {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  min-height: 0;
+}
+
+.copyColumn h2 {
+  max-width: 560px;
+  margin: 0 0 clamp(1.25rem, 2.5vw, 2rem);
+  font-family: var(--font-family-body, Arial, sans-serif);
+  font-size: clamp(1.45rem, 2.1vw, 2rem);
+  line-height: 1.12;
+  font-weight: 900;
+}
+
+.copyColumn p {
+  max-width: 560px;
+  margin: 0 0 clamp(1.25rem, 2.5vw, 2rem);
+  font-family: var(--font-family-body, Arial, sans-serif);
+  font-size: clamp(1.15rem, 2vw, 2rem);
+  line-height: 1.12;
+  font-weight: 400;
+}
+
+.copyColumn p:last-child {
+  margin-bottom: 0;
+}
+
+.imageColumn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 0;
+}
+
+.collageImage {
+  width: min(100%, 720px);
+  max-height: 48svh;
+  height: auto;
+  object-fit: contain;
+  display: block;
+}
+
+.buttonRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: clamp(1.25rem, 3vw, 2.5rem);
+}
+
+.learnMore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 230px;
+  min-height: 78px;
+  padding: 1.15rem 2rem;
+  background: var(--purple-500, #7a5ea4);
+  color: #fff;
+  text-decoration: none;
+  font-family: var(--font-family-body, Arial, sans-serif);
+  font-size: clamp(1.5rem, 2.6vw, 2.4rem);
+  line-height: 1;
+  font-weight: 900;
+  text-transform: uppercase;
+}
+
+.learnMore:hover {
+  filter: brightness(0.92);
+}
+
+@media (max-height: 760px) and (min-width: 1051px) {
+  .section {
+    padding: 1rem;
+  }
+
+  .logoSection {
+    padding-bottom: 1rem;
+  }
+
+  .logo {
+    width: min(100%, 700px);
+    max-height: 18svh;
+  }
+
+  .contentGrid {
+    gap: clamp(2rem, 5vw, 5rem);
+  }
+
+  .copyColumn h2 {
+    font-size: clamp(1.2rem, 1.8vw, 1.65rem);
+    margin-bottom: 0.9rem;
+  }
+
+  .copyColumn p {
+    font-size: clamp(1.15rem, 1.8vw, 1.8rem);
+    margin-bottom: 1rem;
+  }
+
+  .collageImage {
+    width: min(100%, 640px);
+    max-height: 45svh;
+  }
+
+  .buttonRow {
+    padding-top: 1rem;
+  }
+
+  .learnMore {
+    min-height: 58px;
+    min-width: 190px;
+    font-size: clamp(1.15rem, 1.8vw, 1.6rem);
+    padding: 0.85rem 1.5rem;
+  }
+}
+
+@media (max-width: 1050px) {
+  .section {
+    height: auto;
+    max-height: none;
+    min-height: auto;
+    overflow: visible;
+    padding: clamp(2.5rem, 6vw, 4rem) 1rem;
+  }
+
+  .inner {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .logoSection {
+    padding-bottom: 2rem;
+  }
+
+  .logo {
+    max-height: none;
+    width: min(100%, 760px);
+  }
+
+  .contentGrid {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+
+  .copyColumn {
+    align-items: center;
+    text-align: center;
+  }
+
+  .copyColumn h2,
+  .copyColumn p {
+    max-width: 720px;
+  }
+
+  .collageImage {
+    width: min(100%, 700px);
+    max-height: none;
+  }
+
+  .buttonRow {
+    padding-top: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .section {
+    padding: 2.5rem 1rem;
+  }
+
+  .inner {
+    width: min(100% - 16px, 1260px);
+  }
+
+  .logoSection {
+    padding-bottom: 1.75rem;
+  }
+
+  .copyColumn h2 {
+    font-size: clamp(1.25rem, 6vw, 1.75rem);
+    line-height: 1.14;
+  }
+
+  .copyColumn p {
+    font-size: clamp(1.2rem, 6vw, 1.65rem);
+    line-height: 1.18;
+  }
+
+  .learnMore {
+    min-width: 200px;
+    min-height: 68px;
+    font-size: 1.45rem;
+  }
+}
