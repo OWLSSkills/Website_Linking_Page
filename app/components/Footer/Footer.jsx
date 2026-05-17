@@ -2,7 +2,7 @@
 
 import styles from './Footer.module.css';
 import SocialIcons from './Socials/Socials';
-
+import Link from 'next/link';
 export default function Footer() {
   const currentYear = new Date().getFullYear();
   return (
@@ -19,16 +19,20 @@ export default function Footer() {
       </div>
 
       <div className={styles.footerStack}>
-        <img
-          src="/images/Jessie_Krebs_Color.png"
-          alt="Jessie Krebs Logo"
-          className={styles.smallLogo}
-        />
+        <Link href="/" className={styles.heroLogoLink} aria-label="Go to homepage">
+
+          <img
+            src="/images/Jessie_Krebs_Color.png"
+            alt="Jessie Krebs Logo"
+            className={styles.smallLogo}
+            href="/"
+          />
+        </Link>
         <p className={`alfarn ${styles.text}`}>© {currentYear} Jessie Krebs.</p>
         <p className={`alfarn`}>All rights reserved.</p>
       </div>
       <div className={styles.affiliateLogos}>
-        <img className={`${styles.logoFooter}`} onClick={() => window.open("https://www.owlsskills.com")} src='/images/OWLS_color_without_description.png' alt='owl skills logo'/>
+        <img className={`${styles.logoFooter}`} onClick={() => window.open("https://www.owlsskills.com")} src='/images/OWLS_color_without_description.png' alt='owl skills logo' />
         <div className={styles.logoLockup} onClick={() => window.open("https://www.jessiekrebs.com")}>
           <h2 className={styles.alfarn_custom}>Custom Courses</h2>
           <p className={styles.gloria_cursive}>by Jessie Krebs</p>

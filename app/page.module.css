@@ -13,6 +13,7 @@
   margin-top: -4%;
   margin-left: auto;
   margin-right: auto;
+  cursor: pointer;
 }
 
 .topRightLogos {
@@ -40,7 +41,7 @@
 
 .logoGrid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(120px, 1fr));
+  grid-template-columns: repeat(4, minmax(120px, 1fr));
   gap: 2rem;
   justify-items: center;
   align-items: center;
@@ -53,13 +54,6 @@
   height: auto;
 }
 
-.logoGrid img:nth-child(1) {
-  grid-column: span 2;
-}
-
-.logoGrid img:nth-child(3) {
-  grid-column: span 2;
-}
 
 .topLeftLinks {
   position: absolute;

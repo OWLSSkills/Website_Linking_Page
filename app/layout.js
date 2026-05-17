@@ -24,11 +24,13 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className={styles.siteHeader}>
-          <img
-            src="/images/Jessie_Krebs_Color.png"
-            alt="Jessie Krebs"
-            className={`img-fluid ${styles.heroLogo} center`}
-          />
+          <Link href="/" className={styles.heroLogoLink} aria-label="Go to homepage">
+            <img
+              src="/images/Jessie_Krebs_Color.png"
+              alt="Jessie Krebs"
+              className={`img-fluid ${styles.heroLogo} center`}
+            />
+          </Link>
 
           <div className={styles.topLeftLinks}>
             <Link href="/packing_list">General Packing List</Link>
