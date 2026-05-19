@@ -4,7 +4,7 @@ export default function PackingList() {
   return (
     <section className={styles.packingSection}>
       <div className={styles.header}>
-        <h1>Jessie Krebs General Packing Lists</h1>
+        <h1 className="gloria">Jessie Krebs General Packing Lists</h1>
         <h2>To help you prepare for what you’ll need</h2>
 
         <div className={styles.intro}>
@@ -31,7 +31,7 @@ export default function PackingList() {
 
       <div className={styles.paperCard}>
         <div className={styles.paperInner}>
-          <h3>For a typical one-day program:</h3>
+          <h3 className="alfarn">For a typical one-day program:</h3>
 
           <p className={styles.listIntro}>Bring or wear:</p>
 

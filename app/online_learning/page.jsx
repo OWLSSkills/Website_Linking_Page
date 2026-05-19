@@ -6,7 +6,7 @@ export default function OnlineLearningPage() {
   return (
     <main className={styles.page}>
       <header className={styles.header}>
-        <h1>Jessie Krebs Online Learning</h1>
+        <h1 className="gloria">Jessie Krebs Online Learning</h1>
       </header>
 
       {onlineLearningArticles.map((article) => (

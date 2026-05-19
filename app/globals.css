@@ -20,6 +20,7 @@ html, body {
   --ink-900: #122932;
   --steel-400: rgb(169,169,169);
   --lavender-200: #e7daee;
+  --font-family-display: 'Alfarn', system-ui, sans-serif;
 
   --radius: .5rem;
   --s-1: .25rem;
