@@ -89,6 +89,10 @@ html, body {
 .scale-180{ transform: scale(1.8); }
 
 
+.alfarn{  font-family: 'Alfarn', system-ui, sans-serif;}
+.gloria{
+    font-family: "gloria-hallelujah", sans-serif;
+}
 
 .z-10{ z-index:10; } .relative{ position:relative; } .absolute{ position:absolute; }
 

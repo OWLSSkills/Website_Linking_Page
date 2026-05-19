@@ -20,8 +20,18 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const adobeKey = process.env.ADOBE_KEY;
+
   return (
     <html lang="en">
+      <head>
+        {adobeKey ? (
+          <>
+            <link rel="preconnect" href="https://use.typekit.net" />
+            <link rel="stylesheet" href={adobeKey} />
+          </>
+        ) : null}
+      </head>
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className={styles.siteHeader}>
           <Link href="/" className={styles.heroLogoLink} aria-label="Go to homepage">

@@ -5,7 +5,7 @@ export function CustomCoursesIntro() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <h2 className={styles.title}>Custom Courses</h2>
+        <h2 className={`${styles.title} alfarn`}>Custom Courses</h2>
 
         <div className={styles.contentGrid}>
           <div className={styles.collageColumn}>
@@ -19,7 +19,7 @@ export function CustomCoursesIntro() {
           </div>
 
           <div className={styles.copyColumn}>
-            <p className={styles.subtitle}>by Jessie Krebs</p>
+            <p className={`${styles.subtitle} gloria`}>by Jessie Krebs</p>
 
             <p className={styles.mainCopy}>
               Interested in having Jessie join your event in some way? From a 20
@@ -28,7 +28,7 @@ export function CustomCoursesIntro() {
               this way to get it sorted!
             </p>
 
-            <div className={styles.topicGrid}>
+            <div className={`${styles.topicGrid} gloria`}>
               <ul>
                 <li>Wilderness skills</li>
                 <li>Guest Speaker</li>
