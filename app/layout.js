@@ -41,6 +41,7 @@ export default function RootLayout({ children }) {
               className={`img-fluid ${styles.heroLogo} center`}
             />
           </Link>
+          
 
           <div className={styles.topLeftLinks}>
             <Link href="/packing_list">General Packing List</Link>
