@@ -1,7 +1,7 @@
 export const onlineLearningArticles = [
   {
     title: "How to Navigate in the Backcountry at Night",
-    date: "01/01/2010",
+    date: "03/21/2024",
     subtitle: "Article for Backpacker",
     imageSrc: "/images/sunset_trees.png",
     imageAlt: "Sunset sky over silhouetted trees",
@@ -18,7 +18,7 @@ export const onlineLearningArticles = [
   },
   {
     title: "Jessie Krebs on Why the Wilderness Can Heal Instead of Harm",
-    date: "01/01/2010",
+    date: "03/19/2026",
     subtitle: "Article for Outdoor Life",
     imageSrc: "/images/Jessie_Mountain_Lake.png",
     imageAlt: "Jessie Krebs sitting in a mountain landscape",

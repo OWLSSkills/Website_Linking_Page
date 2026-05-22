@@ -1,0 +1,50 @@
+.logo {
+  position: relative;
+  display: inline-block;
+  width: fit-content;
+  max-width: 100%;
+  text-align: var(--logo-align);
+  padding-bottom: calc(var(--subtitle-size) * 1.35);
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.logo:hover {
+  opacity: 0.9;
+}
+
+.title {
+  margin: 0;
+  font-family: var(--font-family-display, sans-serif);
+  font-size: var(--title-size);
+  line-height: 0.82;
+  text-transform: uppercase;
+  font-weight: 900;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.subtitle {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  margin: 0;
+  font-family: var(--font-family-handwritten, cursive);
+  font-size: var(--subtitle-size);
+  line-height: 1;
+  font-weight: 400;
+  white-space: nowrap;
+  transform: translateY(0.12em);
+}
+
+@media (max-width: 640px) {
+  .title {
+    white-space: normal;
+    text-align: center;
+  }
+
+  .subtitle {
+    right: 0;
+  }
+}

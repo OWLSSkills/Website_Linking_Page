@@ -116,7 +116,7 @@
 .articleBody p {
   margin: 0 0 1.75rem;
   font-family: var(--font-family-body, Arial, sans-serif);
-  font-size: clamp(1rem, 1.25vw, 1.2rem);
+  font-size: var(--paragraph);
   line-height: 1.55;
 }
 

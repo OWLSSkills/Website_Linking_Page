@@ -1,11 +1,18 @@
 import Image from "next/image";
 import styles from "./CustomCoursesIntro.module.css";
+import CustomCoursesLogo from "@/app/components/misc/customCourseLogo/CustomCoursesLogo";
 
 export function CustomCoursesIntro() {
   return (
     <section className={styles.section}>
       <div className={styles.inner}>
-        <h2 className={`${styles.title} alfarn`}>Custom Courses</h2>
+        <div className={styles.logoRow}>
+          <CustomCoursesLogo
+            titleSize="clamp(2rem, 3vw, 3rem)"
+            subtitleRatio={0.34}
+            href="/"
+          />
+        </div>
 
         <div className={styles.contentGrid}>
           <div className={styles.collageColumn}>
@@ -19,8 +26,6 @@ export function CustomCoursesIntro() {
           </div>
 
           <div className={styles.copyColumn}>
-            <p className={`${styles.subtitle} gloria`}>by Jessie Krebs</p>
-
             <p className={styles.mainCopy}>
               Interested in having Jessie join your event in some way? From a 20
               minute keynote speech in Oklahoma to a month learning skills in the

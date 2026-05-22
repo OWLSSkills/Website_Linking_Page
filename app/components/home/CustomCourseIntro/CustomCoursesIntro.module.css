@@ -11,6 +11,13 @@
   overflow: hidden;
 }
 
+.logoRow {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 0 clamp(1rem, 2vw, 1.75rem);
+}
+
 .inner {
   width: min(100% - 32px, 1260px);
   height: 100%;
@@ -21,15 +28,6 @@
   min-height: 0;
 }
 
-.title {
-  margin: 0 0 clamp(1rem, 2vw, 1.75rem);
-  text-align: center;
-  font-size: clamp(3.5rem, 6.5vw, 6.5rem);
-  line-height: 0.82;
-  text-transform: uppercase;
-  font-weight: 900;
-  letter-spacing: 0.02em;
-}
 
 .contentGrid {
   display: grid;
@@ -61,13 +59,7 @@
   min-height: 0;
 }
 
-.subtitle {
-  width: 100%;
-  margin: 0 0 clamp(1rem, 2vw, 1.75rem);
-  font-size: clamp(2rem, 3.8vw, 3.5rem);
-  line-height: 1;
-  text-align: left;
-}
+
 
 .mainCopy {
   max-width: 640px;
@@ -125,10 +117,6 @@
     padding: 1.25rem 1rem;
   }
 
-  .title {
-    font-size: clamp(3rem, 5.8vw, 5.5rem);
-    margin-bottom: 1rem;
-  }
 
   .contentGrid {
     gap: clamp(1.5rem, 4vw, 4rem);
@@ -139,10 +127,7 @@
     width: min(100%, 480px);
   }
 
-  .subtitle {
-    font-size: clamp(1.8rem, 3.3vw, 3rem);
-    margin-bottom: 0.9rem;
-  }
+
 
   .mainCopy {
     font-size: clamp(1.15rem, 1.8vw, 1.85rem);
@@ -198,9 +183,7 @@
     text-align: center;
   }
 
-  .subtitle {
-    text-align: center;
-  }
+
 
   .mainCopy {
     text-align: center;
@@ -221,13 +204,6 @@
     width: min(100% - 16px, 1260px);
   }
 
-  .title {
-    font-size: clamp(3rem, 15vw, 4.7rem);
-  }
-
-  .subtitle {
-    font-size: clamp(2rem, 10vw, 3rem);
-  }
 
   .mainCopy {
     font-size: clamp(1.25rem, 6vw, 1.7rem);

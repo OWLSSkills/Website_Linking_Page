@@ -24,8 +24,9 @@ export default function PackingList() {
 
           <p>
             Please don&apos;t bring pets or young children unless specifically
-            cleared through OWLS Skills, thank you!
+            cleared through OWLS Skills, 
           </p>
+          <p>thank you!</p>
         </div>
       </div>
 

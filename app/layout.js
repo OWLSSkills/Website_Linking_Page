@@ -41,7 +41,7 @@ export default function RootLayout({ children }) {
               className={`img-fluid ${styles.heroLogo} center`}
             />
           </Link>
-          
+
 
           <div className={styles.topLeftLinks}>
             <Link href="/packing_list">General Packing List</Link>
@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
               <img src="/logo_references/discovery.png" alt="Discovery Logo" />
               <img className={styles.mobileInvisible} src="/logo_references/backPacker.png" alt="Backpacker Logo" />
               <img className={styles.mobileInvisible} src="/logo_references/Durango-Herald.png" alt="Durango Herald Logo" />
-              <img className={styles.mobileInvisible} src="/logo_references/Black_Fox.png" alt="Black Fox Logo" />
+              <img className={styles.mobileInvisible} src="/logo_references/Fox_black.png" alt="Black Fox Logo" />
             </div>
           </div>
         </div>
