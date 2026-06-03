@@ -1,26 +1,33 @@
-
-.section{
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
-    scale: .7
+.section,
+.sectionSmall {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: clamp(0.5rem, 1.2vw, 1rem);
+  text-align: center;
 }
 
-.section_small{
-    align-items: center;
-    justify-content: center;
-    align-content: center;
-    text-align: center;
+.section {
+  /* transform: scale(0.7); */
+  transform-origin: center;
 }
 
-
-
-.social_icon{
-    width: 7svw;
-    cursor: pointer;
+.socialIcon {
+  width: var(--social-icon-size, clamp(2.75rem, 4vw, 4.5rem));
+  height: var(--social-icon-size, clamp(2.75rem, 4vw, 4.5rem));
+  object-fit: contain;
+  display: block;
+  cursor: pointer;
 }
-.size_correction_for_facebook{
-    scale: 1.1;
-    transform: translate(0,-.4svw);
+
+.facebookIcon {
+  width: calc(var(--social-icon-size, clamp(2.75rem, 4vw, 4.5rem)) * 1.1);
+  height: calc(var(--social-icon-size, clamp(2.75rem, 4vw, 4.5rem)) * 1.1);
+  transform: translateY(-0.15rem);
+}
+
+@media (max-width: 800px) {
+  .socialIcon {
+    --social-icon-size: clamp(2.5rem, 11vw, 3.5rem);
+  }
 }
