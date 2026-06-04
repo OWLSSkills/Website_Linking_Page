@@ -460,12 +460,7 @@
 
 
 
-  .videoHeroSection {
-    background-image: url("/images/Jessie_Banner_Video_Background_image.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center 30%;
-  }
+
 
   .videoLogoWrap {
     height: 100px;
