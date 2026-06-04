@@ -65,7 +65,7 @@
   max-width: 560px;
   margin: 0 0 clamp(1.25rem, 2.5vw, 2rem);
   font-family: var(--font-family-body, Arial, sans-serif);
-  font-size: clamp(1.15rem, 2vw, 2rem);
+  font-size: clamp(1.15rem, 1.5vw, 1.75rem);
   line-height: 1.12;
   font-weight: 400;
 }
