@@ -92,6 +92,7 @@
   overflow: hidden;
   isolation: isolate;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  background: #111;
 }
 
 .videoBg {
@@ -101,7 +102,7 @@
   height: 100%;
   object-fit: cover;
   object-position: center 30%;
-  z-index: -2;
+  z-index: 0;
   pointer-events: none;
 }
 
@@ -109,12 +110,12 @@
   position: absolute;
   inset: 0;
   background: rgba(241, 241, 241, 0.25);
-  z-index: -1;
+  z-index: 1;
 }
 
 .videoContent {
   position: relative;
-  z-index: 1;
+  z-index: 2;
   width: min(100% - 32px, 1200px);
   height: 100%;
   margin: 0 auto;
@@ -124,7 +125,6 @@
   justify-content: center;
   gap: clamp(2rem, 8vw, 7rem);
 }
-
 .videoCard {
   flex: 1 1 0;
   max-width: 420px;
