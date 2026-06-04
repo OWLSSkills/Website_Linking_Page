@@ -18,9 +18,12 @@
 
 .topRightLogos {
   position: absolute;
-  top: 0;
-  right: 0;
-  padding: 4svw;
+  top: clamp(1rem, 3vw, 2.5rem);
+
+  /* pushes socials toward center */
+  right: clamp(7rem, 12vw, 14rem);
+
+  padding: 0;
   display: flex;
   align-items: center;
   gap: 0.5rem;
@@ -42,7 +45,9 @@
 .logoGrid {
   display: grid;
   grid-template-columns: repeat(4, minmax(120px, 1fr));
-  gap: 2rem;
+
+  gap: 0rem 2rem;
+
   justify-items: center;
   align-items: center;
   max-width: 1000px;
@@ -58,9 +63,12 @@
 .topLeftLinks {
   position: absolute;
   top: clamp(1rem, 3vw, 2.5rem);
-  left: clamp(1rem, 4vw, 4rem);
+
+  /* pushes links toward center */
+  left: clamp(7rem, 12vw, 14rem);
+
   z-index: 20;
-  padding: 4svw;
+  padding: 0;
 
   display: flex;
   flex-direction: column;
@@ -476,4 +484,5 @@
 .siteHeader {
   height: auto;
   overflow: hidden;
+  padding: 2rem;
 }

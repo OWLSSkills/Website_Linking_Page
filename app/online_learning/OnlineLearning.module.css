@@ -11,7 +11,7 @@
 
 .header h1 {
   margin: 0;
-  font-size: clamp(2.6rem, 6vw, 5.2rem);
+  font-size: clamp(2rem, 4vw, 3.8rem);
   font-weight: 500;
   line-height: 0.95;
 }
