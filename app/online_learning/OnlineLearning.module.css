@@ -31,7 +31,7 @@
 .articleShell {
   width: min(100% - 48px, 1220px);
   margin: 0 auto;
-  padding: clamp(2.5rem, 5vw, 4.5rem) 0;
+  padding: clamp(5rem, 5vw, 4.5rem);
 }
 
 .articleShell h2 {
