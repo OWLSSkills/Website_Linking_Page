@@ -9,7 +9,7 @@ export default function PackingList() {
 
         <div className={styles.intro}>
           <p>
-            We are usually close to our vehicles, so feel free to bring whatever
+            We are usually close to our vehicles at the beginning of our trip, so feel free to bring whatever
             you think you might want to be comfortable. If you’re not sure, bring
             it with you!
           </p>
@@ -26,7 +26,7 @@ export default function PackingList() {
             Please don&apos;t bring pets or young children unless specifically
             cleared through OWLS Skills, 
           </p>
-          <p>thank you!</p>
+          <p>Thank you!</p>
         </div>
       </div>
 
