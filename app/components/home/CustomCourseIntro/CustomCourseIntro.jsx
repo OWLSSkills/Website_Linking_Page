@@ -47,7 +47,7 @@ export function CustomCoursesIntro() {
               </ul>
             </div>
 
-            <a href="/contact" className={styles.learnMore}>
+            <a href="https://trainwithjessie.com/contact" className={styles.learnMore}>
               Learn More
             </a>
           </div>
