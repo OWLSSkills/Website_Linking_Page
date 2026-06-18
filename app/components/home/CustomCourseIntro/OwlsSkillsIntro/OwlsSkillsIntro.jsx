@@ -46,7 +46,7 @@ export function OwlsSkillsIntro() {
         </div>
 
         <div className={styles.buttonRow}>
-          <a href="/contact" className={styles.learnMore}>
+          <a href="https://www.owlsskills.com/" className={styles.learnMore}>
             Learn More
           </a>
         </div>
